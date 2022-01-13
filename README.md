@@ -15,22 +15,34 @@ With over 200 million users, MercadoLibre is the most popular e-commerce site in
 - Hourly Google search traffic data between Jun 2016 and Sep 2020 was analyzed which shows that search traffic in May'20 is 8.5% higher compared to the monhtly median search traffic across all months
 - Search trafiic seasonality 
   - Search traffic is high on weekdays compared to weekends
+  - ![alt text](Search_Trend.png)
   - Irrespective of the day of the week, serach traffic is high around the midnight
-  ![alt text](http://url/to/img.png)
+  - ![alt text](Search_Heatmap.png)
 - Relation between search traffic and stock price pattern
   - A correlation analysis between lagged search traffic, stock volatility and hourly change in stock price shows that there is no predictable relation exist between all three series
+  
+  | |Lagged Search Trends|Stock Volatility|Hourly Stock Return|
+  |:-:|:-:|:-:|:-:|
+  |Lagged Search Trends|1.000000|	-0.118945|	0.017929|
+  |Stock Volatility|-0.118945|	1.000000|	0.046723|
+  |Hourly Stock Return|0.017929|	0.046723|	1.000000|
+  
 - Time series model to prdict the search traffic
   - A time series model was developed using FB Prophet and Google search data to predict the search traffic
+  - ![alt text](Search_Traffic_Forecast.png)
   - Component of the model shows that
     - Search traffic peaks on Tuesday and goes down for rest of the week
     - Search traffic is at lowest level Between September and November
     - Serach traffic is at highest level around the midnight
+    - ![alt text](Component_Traffic.png)
   - Search traffic trend shows it is declining and thats why near term forecast shows a decrease in search traffic
 - Time series model to prdict the revenue
   - A time series model was developed using FB Prophet and historical revenue data to predict the next quarter sales
+  - - ![alt text](Revenue_Forecast.png)
   - Component of the model shows that
     - Revenue is trending higher
     - First three days of the week (Monday, Tuesday and Wednesday) are the high revenue days
+    - ![alt text](Component_Revenue.png)
   - Forecasted Q3 2020 Sales (numbers are in USD, million):
     - Expected total sales - 2163.61
     - Best case scenario sales - 2337.90
